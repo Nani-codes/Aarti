@@ -31,20 +31,10 @@ export default function Programs() {
       image: '/images/works/download (1).jpeg',
       alt: 'Maratha Hostel campus and surroundings',
     },
-    {
-      id: 5,
-      image: '/images/works/download (2).jpeg',
-      alt: 'Maratha Hostel interior facilities',
-    },
-    {
-      id: 6,
-      image: '/images/works/download (3).jpeg',
-      alt: 'Maratha Hostel students and activities',
-    },
   ];
 
   return (
-    <section id="programs" className="py-20 relative overflow-hidden bg-[#f5f7fa] programs-section">
+    <section id="programs" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden bg-[#f5f7fa] programs-section">
       {/* Background Image + Themed Overlay */}
       <div 
         className="absolute inset-0 z-0 bg-[#f5f7fa]"
@@ -66,36 +56,36 @@ export default function Programs() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Unified Section Header */}
-        <div className="text-center mb-12 max-w-[660px] mx-auto lg:text-left lg:mx-0">
+        <div className="text-center mb-8 sm:mb-12 max-w-[660px] mx-auto">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wide block mb-2">
             Our Social Initiatives
           </span>
-          <div className="inline-block mb-4 lg:mb-4">
-            <div className="w-16 h-1 bg-secondary/30 mx-auto mb-2 lg:mx-0"></div>
-            <div className="w-10 h-1 bg-secondary/60 mx-auto lg:mx-0"></div>
+          <div className="inline-block mb-3 sm:mb-4">
+            <div className="w-16 h-1 bg-secondary/30 mx-auto mb-2"></div>
+            <div className="w-10 h-1 bg-secondary/60 mx-auto"></div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mt-2">
+          <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-black leading-[1.3]">
             Towards Social Development
           </h2>
         </div>
 
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {programs.map((program) => (
             <div
               key={program.id}
-              className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 program-card"
+              className="group bg-white rounded-2xl p-4 sm:p-6 border border-gray-100 shadow-[0_4px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 program-card"
             >
-              <div className="relative mb-6 program-image-container overflow-hidden rounded-xl">
+              <div className="relative mb-4 sm:mb-6 program-image-container overflow-hidden rounded-xl">
                 <div className="relative w-full" style={{ aspectRatio: '282/188' }}>
                   <Image
                     src={program.image}
                     alt={program.alt}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-xl"
                   />
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                 </div>
               </div>
             </div>
@@ -103,29 +93,29 @@ export default function Programs() {
         </div>
 
         {/* Second Section Header */}
-        <div className="text-center mt-16 mb-12 max-w-[660px] mx-auto lg:text-left lg:mx-0">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mt-2">
+        <div className="text-center mt-12 sm:mt-16 mb-8 sm:mb-12">
+          <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-black leading-[1.3]">
             Towards Maratha Hostel
           </h2>
         </div>
 
         {/* Maratha Hostel Works Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
           {marathaHostelWorks.map((work) => (
             <div
               key={work.id}
-              className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 program-card w-full"
+              className="group bg-white rounded-2xl p-4 sm:p-6 border border-gray-100 shadow-[0_4px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 program-card w-full"
             >
-              <div className="relative mb-6 program-image-container overflow-hidden rounded-xl bg-white">
-                <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
+              <div className="relative mb-4 sm:mb-6 program-image-container overflow-hidden rounded-xl">
+                <div className="relative w-full" style={{ aspectRatio: '4/5' }}>
                   <Image
                     src={work.image}
                     alt={work.alt}
                     fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-300 rounded-xl"
                   />
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                 </div>
               </div>
             </div>
@@ -166,6 +156,16 @@ export default function Programs() {
         
         .program-image-container {
           margin-bottom: clamp(20px, 1.84vw, 35px);
+        }
+        
+        .hostel-image-container {
+          margin-bottom: 0;
+        }
+        
+        @media (max-width: 640px) {
+          .program-card {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+          }
         }
       `}</style>
     </section>

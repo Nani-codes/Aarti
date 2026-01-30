@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* About */}
-          <div>
+        <div className="mb-12 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8">
+          {/* About Section - Full Width on Mobile */}
+          <div className="mb-8 md:mb-0 md:col-span-2 lg:col-span-1">
             <div className="mb-6 flex items-center gap-3">
               <Image
                 src="/images/aarti_logo.jpeg"
@@ -53,77 +53,80 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-bold mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/courses" className="text-gray-400 hover:text-white transition">
-                  Our Courses
-                </Link>
-              </li>
-              <li>
-                <Link href="/promoters" className="text-gray-400 hover:text-white transition">
-                  Promoters
-                </Link>
-              </li>
-              <li>
-                <Link href="/instructors" className="text-gray-400 hover:text-white transition">
-                  Educators
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-400 hover:text-white transition">
-                  News &amp; Blogs
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
+          {/* Two Column Layout for Quick Links and Support on Mobile */}
+          <div className="grid grid-cols-2 md:contents gap-6 md:gap-8 mb-8 md:mb-0">
+            {/* Quick Links */}
+            <div className="text-left">
+              <h4 className="text-lg font-bold mb-4 md:mb-6">Quick Links</h4>
+              <ul className="space-y-0 text-sm md:text-base">
+                <li>
+                  <Link href="/about" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/courses" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    Our Courses
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/promoters" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    Promoters
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/instructors" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    Educators
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    News &amp; Blogs
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Support */}
+            <div className="text-left">
+              <h4 className="text-lg font-bold mb-4 md:mb-6">Support</h4>
+              <ul className="space-y-0 text-sm md:text-base">
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    Help Center
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white transition block" style={{ lineHeight: '2.2' }}>
+                    Scholarships & Aid
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-bold mb-6">Support</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition">
-                  Scholarships & Aid
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
+          {/* Newsletter - Full Width on Mobile */}
+          <div className="md:col-span-2 lg:col-span-1">
             <h4 className="text-lg font-bold mb-6">Newsletter</h4>
             <p className="text-gray-400 mb-4">
               Subscribe to get updates on new courses, programs, and special offers.

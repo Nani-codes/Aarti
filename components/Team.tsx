@@ -45,27 +45,24 @@ export default function Team() {
   ];
 
   return (
-    <section id="promoters" className="py-20 bg-white">
+    <section id="promoters" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Unified Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <span className="text-secondary font-semibold text-sm uppercase tracking-wide block mb-2">
             Our Leadership
           </span>
-          <div className="inline-block mb-4">
+          <div className="inline-block mb-3 sm:mb-4">
             <div className="w-16 h-1 bg-secondary/30 mx-auto mb-2"></div>
             <div className="w-10 h-1 bg-secondary/60 mx-auto"></div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-[24px] sm:text-3xl md:text-4xl font-bold text-black mb-0">
             Committed to Empowering Youth and Social Service
           </h2>
-          <p className="text-lg text-paragraph max-w-3xl mx-auto">
-            Meet our dedicated community leadership committed to empowering youth and serving the community.
-          </p>
         </div>
 
         {/* Team Slider */}
-        <div className="relative px-12 md:px-16">
+        <div className="relative px-4 sm:px-6 md:px-12 lg:px-16">
           <Swiper
             modules={[Navigation, Autoplay]}
             className="team-slider"
@@ -76,26 +73,26 @@ export default function Team() {
             speed={900}
             autoplay={{ delay: 4000, disableOnInteraction: false }}
             breakpoints={{
-              0: { slidesPerView: 1, spaceBetween: 16 },
+              0: { slidesPerView: 1.1, spaceBetween: 16 },
               576: { slidesPerView: 2, spaceBetween: 20 },
               992: { slidesPerView: 3, spaceBetween: 26 },
               1400: { slidesPerView: 4, spaceBetween: 32 },
             }}
           >
           {teamMembers.map((member) => (
-            <SwiperSlide key={member.id}>
-              <div className="bg-gray-100 overflow-hidden text-center transition-all duration-[400ms] hover:bg-primary group team-member-card rounded-2xl">
+            <SwiperSlide key={member.id} className="h-auto">
+              <div className="bg-white rounded-xl shadow-sm overflow-hidden text-center transition-all duration-300 team-member-card h-full">
                 <div className="relative z-[1] team-member-img">
                   <div
-                    className="relative w-full overflow-hidden bg-white"
-                    style={{ aspectRatio: '308/360' }}
+                    className="relative w-full overflow-hidden bg-[#f9f9f9] rounded-t-xl"
+                    style={{ aspectRatio: '4/5' }}
                   >
                     <Image
                       src={member.image}
                       alt={member.name}
                       fill
                       sizes="(max-width: 576px) 90vw, (max-width: 992px) 45vw, 25vw"
-                      className="object-contain p-2"
+                      className="object-cover team-member-image"
                     />
                     {/* Gradient Overlay */}
                     <div className="team-member-overlay"></div>
@@ -140,11 +137,11 @@ export default function Team() {
                     </div>
                   </div>
                 </div>
-                <div className="team-member-info">
-                  <h3 className="team-member-name">
+                <div className="team-member-info px-5 pb-6 pt-5">
+                  <h3 className="team-member-name font-bold text-black">
                     {member.name}
                   </h3>
-                  <p className="team-member-designation">{member.designation}</p>
+                  <p className="team-member-designation text-sm text-gray-500 mt-1.5">{member.designation}</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -154,13 +151,41 @@ export default function Team() {
 
         {/* Custom Styles to Match Reference */}
         <style jsx global>{`
+          .team-slider .swiper-slide {
+            height: auto;
+            display: flex;
+          }
+          
           .team-member-card {
-            border-radius: clamp(15px, 1.05vw, 20px);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+          
+          @media (min-width: 992px) {
+            .team-member-card:hover {
+              transform: translateY(-8px);
+              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+            }
           }
           
           .team-member-img {
             position: relative;
             z-index: 1;
+          }
+          
+          .team-member-image {
+            filter: grayscale(30%);
+            transition: filter 0.3s ease;
+          }
+          
+          @media (min-width: 992px) {
+            .team-member-card:hover .team-member-image {
+              filter: grayscale(0%);
+            }
           }
           
           .team-member-overlay {
@@ -171,6 +196,7 @@ export default function Team() {
             background: linear-gradient(180deg, rgba(30, 37, 47, 0) 0%, rgba(30, 37, 47, 0.6) 100%);
             opacity: 0;
             transition: opacity 0.3s ease;
+            border-radius: 12px 12px 0 0;
           }
           
           .team-member-card:hover .team-member-overlay {
@@ -199,65 +225,105 @@ export default function Team() {
           .team-social-icon {
             width: clamp(26px, 1.68vw, 32px);
             aspect-ratio: 1/1;
-            border: 1px solid white;
+            border: 1px solid rgba(255, 255, 255, 0.8);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: rgba(255, 255, 255, 0.9);
             font-size: clamp(9px, 0.63vw, 12px);
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
           }
           
           .team-social-icon:hover {
-            background-color: var(--primary-color, #2563eb);
-            border-color: var(--primary-color, #2563eb);
+            background-color: rgba(0, 0, 0, 0.6);
+            border-color: rgba(255, 255, 255, 1);
           }
           
           .team-member-info {
-            padding: clamp(16px, 1.16vw, 22px) 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            min-height: 80px;
           }
           
           .team-member-name {
             margin-bottom: 0;
-            font-size: clamp(20px, 1.26vw, 24px);
-            font-weight: 600;
-            color: black;
-            transition: color 0.4s ease;
-          }
-          
-          .team-member-card:hover .team-member-name {
-            color: white;
+            font-size: clamp(18px, 1.26vw, 22px);
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.3;
           }
           
           .team-member-designation {
             margin-bottom: 0;
-            color: var(--paragraph-color, #666);
-            transition: color 0.4s ease;
-          }
-          
-          .team-member-card:hover .team-member-designation {
-            color: white;
+            color: #999;
+            font-size: clamp(13px, 0.9vw, 14px);
+            line-height: 1.4;
+            font-weight: 900;
           }
           
           .team-slider {
-            padding: 0 60px !important;
+            padding: 0 50px !important;
           }
           
           @media (max-width: 768px) {
             .team-slider {
-              padding: 0 50px !important;
+              padding: 0 20px !important;
+            }
+          }
+          
+          @media (min-width: 992px) {
+            .team-slider {
+              padding: 0 80px !important;
             }
           }
           
           .team-slider-button-next,
           .team-slider-button-prev {
-            color: #1C43FE;
+            color: #666 !important;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+          }
+          
+          .team-slider-button-next::after,
+          .team-slider-button-prev::after {
+            font-size: 20px;
+            font-weight: 300;
+          }
+          
+          @media (min-width: 992px) {
+            .team-slider-button-next {
+              right: -60px !important;
+            }
+            
+            .team-slider-button-prev {
+              left: -60px !important;
+            }
           }
           
           .team-slider-button-next.swiper-button-disabled,
           .team-slider-button-prev.swiper-button-disabled {
-            opacity: 0.35;
+            opacity: 0.2;
             cursor: not-allowed;
+          }
+          
+          @media (max-width: 768px) {
+            .team-slider-button-next,
+            .team-slider-button-prev {
+              width: 28px;
+              height: 28px;
+              margin-top: -14px;
+            }
+            
+            .team-slider-button-next::after,
+            .team-slider-button-prev::after {
+              font-size: 16px;
+            }
           }
         `}</style>
       </div>

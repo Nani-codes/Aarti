@@ -31,20 +31,20 @@ export default function ContactPage() {
     <>
       <Header />
       <main>
-        <section className="bg-primary py-20 relative overflow-hidden text-white">
+        <section className="bg-primary py-12 sm:py-16 md:py-20 relative overflow-hidden text-white">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-72 h-72 bg-secondary rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-5xl font-bold text-center mb-4">Contact Us</h1>
-            <p className="text-xl text-center max-w-3xl mx-auto text-[#fdebdc]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4">Contact Us</h1>
+            <p className="text-base sm:text-lg md:text-xl text-center max-w-3xl mx-auto text-[#fdebdc]">
               Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
             </p>
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="py-12 sm:py-16 lg:py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-lg">
+                <form onSubmit={handleSubmit} className="bg-gray-50 p-4 sm:p-6 md:p-8 rounded-lg">
                   <div className="mb-6">
                     <label htmlFor="name" className="block text-black font-semibold mb-2">
                       Name

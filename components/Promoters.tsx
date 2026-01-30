@@ -87,7 +87,7 @@ export default function Promoters() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
@@ -110,6 +110,7 @@ export default function Promoters() {
           </div>
         </div>
 
+        <div className="px-6 md:px-12 lg:px-16">
         <Swiper
           modules={[Navigation, Autoplay]}
           className="promoters-slider"
@@ -191,6 +192,7 @@ export default function Promoters() {
             </SwiperSlide>
           ))}
         </Swiper>
+        </div>
 
         {/* Custom Styles to Match Reference */}
         <style jsx global>{`

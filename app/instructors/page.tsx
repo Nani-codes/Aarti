@@ -70,13 +70,13 @@ export default function InstructorsPage() {
     <>
       <Header />
       <main>
-        <section className="bg-primary py-20 relative overflow-hidden">
+        <section className="bg-primary py-12 sm:py-16 md:py-20 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full opacity-10">
             <div className="absolute top-10 left-10 w-32 h-32 border-4 border-white rounded-full" />
             <div className="absolute bottom-10 right-10 w-48 h-48 border-4 border-white rounded-full" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-5xl font-bold text-white text-center mb-4">Our Educators</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-4">Our Educators</h1>
             <div className="flex items-center justify-center gap-2 text-white/80">
               <Link href="/" className="hover:text-white">Home</Link>
               <span>›</span>
@@ -85,7 +85,7 @@ export default function InstructorsPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-gray-50">
+        <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {instructors.map((instructor) => (

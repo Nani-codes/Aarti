@@ -7,20 +7,20 @@ export default function About() {
     <>
       <Header />
       <main>
-        <section className="bg-primary py-20 relative overflow-hidden text-white">
+        <section className="bg-primary py-8 sm:py-12 md:py-20 relative overflow-hidden text-white">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-72 h-72 bg-secondary rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-5xl font-bold text-center mb-4">About AARTI</h1>
-            <p className="text-xl text-center max-w-3xl mx-auto text-[#fdebdc]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3">About AARTI</h1>
+            <p className="text-base sm:text-lg md:text-xl text-center max-w-3xl mx-auto text-[#fdebdc] font-normal">
               Aausaheb Research and Training Institute - A Youth Empowerment Movement
             </p>
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="py-12 sm:py-16 lg:py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               {/* Legacy Section */}
@@ -29,7 +29,7 @@ export default function About() {
                 <div className="absolute inset-0 bg-white rounded-3xl"></div>
                 
                 {/* Content */}
-                <div className="relative z-10 py-16 px-8 md:px-12">
+                <div className="relative z-10 py-12 sm:py-16 px-4 sm:px-6 md:px-12">
                   {/* Header */}
                   <div className="text-center mb-12">
                     <div className="inline-block mb-4">
@@ -40,14 +40,14 @@ export default function About() {
                       Aausaheb&apos;s Legacy
                     </h2>
                     <div className="w-24 h-1 bg-white/50 mx-auto mb-6"></div>
-                    <p className="text-xl md:text-2xl text-center mb-2 italic font-light leading-relaxed max-w-3xl mx-auto subtext text-body">
+                    <p className="text-lg sm:text-xl md:text-2xl text-center mb-2 font-normal leading-relaxed max-w-3xl mx-auto text-gray-700">
                       &quot;From Jijau&apos;s Sanskar to AI-driven Skills - Shaping Brave, Bright, and Self-Reliant Minds&quot;
                     </p>
                   </div>
 
                   {/* Cards Grid */}
                   <div className="space-y-5">
-                    <div className="group card bg-[#fdf8f3] backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 border-l-4 border-primary/30 hover:border-primary">
+                    <div className="group card bg-white backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 border border-[#fdf2e9]">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,17 +55,17 @@ export default function About() {
                           </svg>
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-xl md:text-2xl font-bold text-black mb-3 group-hover:text-primary transition-colors">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-1.5 group-hover:text-primary/90 transition-colors">
                             Instilled Courage and Discipline
                           </h3>
-                          <p className="text-paragraph leading-relaxed">
+                          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                             Foundation of strength and resilience; today reflected in entrepreneurial mindset and project ownership.
                           </p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="group card bg-[#fdf8f3] backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 border-l-4 border-primary/30 hover:border-primary">
+                    <div className="group card bg-white backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 border border-[#fdf2e9]">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,17 +73,17 @@ export default function About() {
                           </svg>
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-xl md:text-2xl font-bold text-black mb-3 group-hover:text-primary transition-colors">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-1.5 group-hover:text-primary/90 transition-colors">
                             Nurtured the Dream of Swaraj
                           </h3>
-                          <p className="text-paragraph leading-relaxed">
+                          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                             Vision of self-reliance; now reborn as Tech Swaraj through AI, robotics, and innovation.
                           </p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="group card bg-[#fdf8f3] backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 border-l-4 border-primary/30 hover:border-primary">
+                    <div className="group card bg-white backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 border border-[#fdf2e9]">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,17 +91,17 @@ export default function About() {
                           </svg>
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-xl md:text-2xl font-bold text-black mb-3 group-hover:text-primary transition-colors">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-1.5 group-hover:text-primary/90 transition-colors">
                             Guided Shivaji with Wisdom and Compassion
                           </h3>
-                          <p className="text-paragraph leading-relaxed">
+                          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                             Model of mentorship; today embodied in value-based learning and emotional intelligence.
                           </p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="group card bg-[#fdf8f3] backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 border-l-4 border-primary/30 hover:border-primary">
+                    <div className="group card bg-white backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 border border-[#fdf2e9]">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,17 +109,17 @@ export default function About() {
                           </svg>
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-xl md:text-2xl font-bold text-black mb-3 group-hover:text-primary transition-colors">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-1.5 group-hover:text-primary/90 transition-colors">
                             Inspired Multilingual and Scholarly Growth
                           </h3>
-                          <p className="text-paragraph leading-relaxed">
+                          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                             Symbol of intellect; today seen in digital fluency, creative thinking, and communication excellence.
                           </p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="group card bg-[#fdf8f3] backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 border-l-4 border-primary/30 hover:border-primary">
+                    <div className="group card bg-white backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.10)] transition-all duration-300 hover:-translate-y-1 border border-[#fdf2e9]">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,10 +127,10 @@ export default function About() {
                           </svg>
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-xl md:text-2xl font-bold text-black mb-3 group-hover:text-primary transition-colors">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-1.5 group-hover:text-primary/90 transition-colors">
                             Empowered Generations through Sanskar and Vision
                           </h3>
-                          <p className="text-paragraph leading-relaxed">
+                          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                             Her timeless influence continues through youth empowerment, ethics, and lifelong learning.
                           </p>
                         </div>
@@ -141,28 +141,21 @@ export default function About() {
               </div>
 
               {/* Vision Section */}
-              <div className="mb-16 relative overflow-hidden">
-                {/* Background with gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-white to-primary/10 rounded-3xl"></div>
-                <div className="absolute inset-0 opacity-5" style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h18v-2h-2v-2h2v-2h-2v-2h2v-2h-2V8h2V6h-2V4h2V2h-2V0h4v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2h2v2h-4zm-18 0h2v2H2v-2zm4 0h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z'/%3E%3C/g%3E%3C/svg%3E")`,
-                }}></div>
+              <div className="mb-12 sm:mb-16 md:mb-20 relative overflow-hidden mt-8 sm:mt-12">
+                {/* Background with soft gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white via-[#fef8f5] to-[#fdf2e9]/30 rounded-3xl"></div>
                 
                 {/* Content */}
-                <div className="relative z-10 py-12 px-8 md:px-12">
+                <div className="relative z-10 py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12">
                   <div className="text-center">
-                    <div className="inline-block mb-4">
-                      <div className="w-16 h-1 bg-primary/30 mx-auto mb-2"></div>
-                      <div className="w-10 h-1 bg-primary/50 mx-auto"></div>
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">Our Vision</h2>
-                    <div className="w-20 h-1 bg-primary/50 mx-auto mb-8"></div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6">Our Vision</h2>
+                    <div className="w-20 h-1 bg-primary/50 mx-auto mb-6 sm:mb-8"></div>
                     <div className="max-w-3xl mx-auto">
-                      <p className="text-lg md:text-xl text-paragraph text-center leading-relaxed font-light">
-                        To empower all youth, inspired by the legacy of Chhatrapati Maharaj, 
+                      <p className="text-base sm:text-lg md:text-xl text-paragraph text-center leading-[1.75] font-normal">
+                        To <strong className="font-bold">empower all youth</strong>, inspired by the legacy of Chhatrapati Maharaj, 
                         to become skilled, innovative, and entrepreneurial professionals — confident in their abilities, 
-                        driving socio-economic growth, and contributing meaningfully to the progress of their 
-                        community and the nation.
+                        driving <strong className="font-bold">socio-economic growth</strong>, and contributing meaningfully to the <strong className="font-bold">progress of their 
+                        community</strong> and the nation.
                       </p>
                     </div>
                   </div>
@@ -181,45 +174,45 @@ export default function About() {
                   </h2>
                   <div className="w-24 h-1 bg-secondary/50 mx-auto"></div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="group relative bg-gradient-to-br from-red-50 to-red-100/50 border-l-4 border-red-500 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+                  <div className="group relative bg-gradient-to-br from-red-50 to-red-100/50 border-l-4 border-red-500 p-4 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full -mr-16 -mt-16"></div>
                     <div className="relative z-10">
-                      <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                       </div>
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-3 group-hover:text-red-600 transition-colors">Lack of Exposure & Skills</h3>
-                      <p className="text-paragraph text-sm md:text-base leading-relaxed">
+                      <h3 className="text-lg md:text-xl font-bold text-black mb-4 group-hover:text-red-600 transition-colors">Lack of Exposure & Skills</h3>
+                      <p className="text-[#555] text-sm md:text-base leading-[1.5]">
                         Insufficient practical, hands-on skilling education opportunities.
                       </p>
                     </div>
                   </div>
-                  <div className="group relative bg-gradient-to-br from-yellow-50 to-yellow-100/50 border-l-4 border-yellow-500 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                  <div className="group relative bg-gradient-to-br from-yellow-50 to-yellow-100/50 border-l-4 border-yellow-500 p-4 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-full -mr-16 -mt-16"></div>
                     <div className="relative z-10">
-                      <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg className="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                         </svg>
                       </div>
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-3 group-hover:text-yellow-600 transition-colors">Infrastructure Gap</h3>
-                      <p className="text-paragraph text-sm md:text-base leading-relaxed">
+                      <h3 className="text-lg md:text-xl font-bold text-black mb-4 group-hover:text-yellow-600 transition-colors">Infrastructure Gap</h3>
+                      <p className="text-[#555] text-sm md:text-base leading-[1.5]">
                         Lack of modern cloud IT infrastructure for skill-based learning.
                       </p>
                     </div>
                   </div>
-                  <div className="group relative bg-gradient-to-br from-blue-50 to-blue-100/50 border-l-4 border-blue-500 p-6 md:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                  <div className="group relative bg-gradient-to-br from-blue-50 to-blue-100/50 border-l-4 border-blue-500 p-4 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full -mr-16 -mt-16"></div>
                     <div className="relative z-10">
-                      <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                       </div>
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-3 group-hover:text-blue-600 transition-colors">Industry-Academia Gap</h3>
-                      <p className="text-paragraph text-sm md:text-base leading-relaxed">
+                      <h3 className="text-lg md:text-xl font-bold text-black mb-4 group-hover:text-blue-600 transition-colors">Industry-Academia Gap</h3>
+                      <p className="text-[#555] text-sm md:text-base leading-[1.5]">
                         Insufficient collaboration between academia and industry.
                       </p>
                     </div>

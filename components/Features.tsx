@@ -1,3 +1,10 @@
+'use client';
+
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+
+const INITIAL_COUNT = 4;
+const DESKTOP_BREAKPOINT = 768; // md breakpoint in Tailwind
 const features = [
   {
     title: 'Career Guidance & Life Skills',
@@ -57,46 +64,127 @@ const features = [
 ];
 
 export default function Features() {
+  const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
+  const [expandedCardIndex, setExpandedCardIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Check if we're on desktop (md breakpoint and up)
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < DESKTOP_BREAKPOINT);
+      // On desktop, always show all
+      if (window.innerWidth >= DESKTOP_BREAKPOINT) {
+        setShowAll(true);
+      }
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  // On desktop: always show all. On mobile: show 4 first, then all when expanded
+  const displayedFeatures = (!isMobile || showAll) ? features : features.slice(0, INITIAL_COUNT);
+  const hasMore = features.length > INITIAL_COUNT && isMobile;
+
+  const handleCardClick = (index: number) => {
+    // If clicking the same card, collapse it. Otherwise, expand the clicked card
+    setExpandedCardIndex(expandedCardIndex === index ? null : index);
+  };
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
-        {/* Unified Section Header */}
-        <div className="text-center mb-12">
-          <span className="text-secondary font-semibold text-sm uppercase tracking-wide block mb-2">
+        {/* Unified Section Header - mobile-optimized hierarchy */}
+        <div className="text-center mb-10 sm:mb-12">
+          <span className="text-secondary font-semibold text-xs uppercase tracking-[1.5px] block mb-2">
             Our Programs
           </span>
-          <div className="inline-block mb-4">
+          <div className="inline-block mb-3 sm:mb-4">
             <div className="w-16 h-1 bg-secondary/30 mx-auto mb-2"></div>
             <div className="w-10 h-1 bg-secondary/60 mx-auto"></div>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-[26px] sm:text-3xl md:text-4xl font-bold text-black leading-[1.3] max-w-[90%] mx-auto mb-4">
             Youth Empowerment Program
           </h2>
-          <p className="text-lg text-paragraph max-w-2xl mx-auto">
+          <p className="text-[15px] sm:text-base md:text-lg leading-[1.7] text-[#555] sm:text-paragraph max-w-[92%] sm:max-w-2xl mx-auto mt-2.5">
             Comprehensive skill development programs designed to transform youth into confident professionals
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group bg-white border border-gray-100 p-6 md:p-8 rounded-2xl shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <div className="text-primary">
-                  {feature.icon}
+        {/* Features Grid - show 4 first, then all on "View All Programs" */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          {displayedFeatures.map((feature, index) => {
+            const isExpanded = expandedCardIndex === index;
+            return (
+              <div
+                key={index}
+                onClick={() => handleCardClick(index)}
+                className={`group border border-gray-100 p-4 md:p-8 rounded-[14px] md:rounded-2xl shadow-sm hover:-translate-y-1 hover:shadow-xl active:scale-[0.99] active:brightness-[0.98] transition-all duration-300 touch-manipulation cursor-pointer ${
+                  index % 2 === 0 ? 'bg-gray-50/40 md:bg-white' : 'bg-white'
+                }`}
+              >
+                <div className="flex gap-3 md:block">
+                  <div className="w-10 h-10 md:w-12 md:h-12 shrink-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center md:mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-primary">
+                      {feature.icon}
+                    </div>
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[16px] md:text-xl font-semibold text-black mb-1.5 md:mb-3 group-hover:text-primary transition-colors leading-snug">
+                      {feature.title}
+                    </h3>
+                    <p className={`text-sm text-[#666] md:text-paragraph leading-[1.6] ${
+                      isExpanded ? 'line-clamp-none' : 'line-clamp-2 md:line-clamp-none'
+                    }`}>
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-black mb-3 group-hover:text-primary transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-paragraph leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
+        </div>
+
+        {/* Section end - mobile: expand/collapse toggle, desktop: direct link */}
+        <div className="mt-8 pt-6 border-t border-gray-200 text-center">
+          {isMobile ? (
+            // Mobile: show expand/collapse toggle
+            showAll ? (
+              <button
+                type="button"
+                onClick={() => setShowAll(false)}
+                className="inline-flex items-center gap-1.5 text-sm text-paragraph hover:text-primary transition-colors"
+              >
+                View Less Programs
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setShowAll(true)}
+                className="inline-flex items-center gap-1.5 text-sm text-paragraph hover:text-primary transition-colors"
+              >
+                View All Programs
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            )
+          ) : (
+            // Desktop: always show link to courses
+            <Link
+              href="/courses"
+              className="inline-flex items-center gap-1.5 text-sm text-paragraph hover:text-primary transition-colors"
+            >
+              View Courses
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          )}
         </div>
       </div>
     </section>

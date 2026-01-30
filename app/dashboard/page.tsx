@@ -31,16 +31,16 @@ export default function DashboardPage() {
     <>
       <Header />
       <main>
-        <section className="bg-gradient-to-br from-primary/10 via-white to-secondary/10 py-20">
+        <section className="bg-gradient-to-br from-primary/10 via-white to-secondary/10 py-12 sm:py-16 lg:py-20">
           <div className="container mx-auto px-4">
-            <h1 className="text-5xl font-bold text-black text-center mb-4">My Dashboard</h1>
-            <p className="text-xl text-body text-center max-w-3xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center mb-4">My Dashboard</h1>
+            <p className="text-base sm:text-lg md:text-xl text-body text-center max-w-3xl mx-auto">
               Continue your learning journey
             </p>
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="py-12 sm:py-16 lg:py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-8">
               <div className="bg-white rounded-lg shadow-md p-6">

@@ -170,7 +170,7 @@ export default function Contribute() {
       <Header />
       <main>
         {/* Breadcrumb/Hero Section */}
-        <section className="relative bg-cover bg-center py-20 md:py-32" style={{ backgroundImage: 'url(/images/donations-bg.png)' }}>
+        <section className="relative bg-cover bg-center py-12 sm:py-16 md:py-32" style={{ backgroundImage: 'url(/images/donations-bg.png)' }}>
           <div className="absolute inset-0 bg-black/70"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center">
@@ -185,7 +185,7 @@ export default function Contribute() {
         </section>
 
         {/* Donation Form Section */}
-        <section className="bg-gray-50 py-10 md:py-20">
+        <section className="bg-gray-50 py-10 sm:py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="flex justify-center">
               <div className="w-full max-w-4xl">
