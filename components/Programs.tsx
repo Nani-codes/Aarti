@@ -14,12 +14,12 @@ export default function Programs() {
     {
       id: 1,
       image: '/images/works/maratha-hostel-kotwalpura-aurangabad-maharashtra-hostel-for-boy-students-g00djlxmzr.avif',
-      alt: 'Maratha Hostel, Kotwalpura Aurangabad - Exterior view',
+      alt: 'Maratha Hostel, Kotwalpura Aurangabad — Exterior view',
     },
     {
       id: 2,
       image: '/images/works/mahratta-hostel-basavanagudi-bangalore-hostels-mxrflg9wd9.avif',
-      alt: 'Mahratta Hostel, Basavanagudi Bangalore - Street view',
+      alt: 'Mahratta Hostel, Basavanagudi Bangalore — Street view',
     },
     {
       id: 3,
