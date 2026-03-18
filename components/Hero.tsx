@@ -26,9 +26,9 @@ export default function Hero() {
             </div>
             */}
             <h1 className="text-[28px] leading-[1.25] md:text-4xl md:leading-tight lg:text-5xl xl:text-6xl font-bold text-black mb-6">
-              The Future Belongs to
+              The Future Belongs to{' '}
               <br className="sm:hidden" />
-              Skilled and
+              Skilled and{' '}
               <br className="sm:hidden" />
               <span className="relative inline-block overflow-hidden">
                 AI-Literate Minds

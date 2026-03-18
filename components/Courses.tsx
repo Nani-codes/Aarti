@@ -68,7 +68,7 @@ const courses = [
   },
   {
     id: 7,
-    title: 'Vibe Coding - Code with AI',
+    title: 'Vibe Coding — Code with AI',
     // instructor: 'Expert Faculty', // Not found in PDF
     price: 22000,
     // rating: 4.7, // Not found in PDF
