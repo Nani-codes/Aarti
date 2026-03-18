@@ -15,7 +15,7 @@ export default function Contribute() {
   const [chequeNumber, setChequeNumber] = useState('');
   const [bankName, setBankName] = useState('');
   const [panCard, setPanCard] = useState('');
-  const [aadharNumber, setAadharNumber] = useState('');
+  const [aadharNumber, setAadhaarNumber] = useState('');
   const [transactionId, setTransactionId] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
@@ -55,7 +55,7 @@ export default function Contribute() {
       return;
     }
 
-    // Validate PAN and Aadhar for donations above 5000
+    // Validate PAN and Aadhaar for donations above 5000
     if (requiresDocuments && !panCard) {
       alert('PAN card is required for amounts above ₹5000');
       setIsSubmitting(false);
@@ -67,12 +67,12 @@ export default function Contribute() {
       return;
     }
     if (requiresDocuments && !aadharNumber) {
-      alert('Aadhar number is required for amounts above ₹5000');
+      alert('Aadhaar number is required for amounts above ₹5000');
       setIsSubmitting(false);
       return;
     }
     if (requiresDocuments && aadharNumber && aadharNumber.length !== 12) {
-      alert('Aadhar number must be exactly 12 digits');
+      alert('Aadhaar number must be exactly 12 digits');
       setIsSubmitting(false);
       return;
     }
@@ -146,7 +146,7 @@ export default function Contribute() {
         setDonorEmail('');
         setDonorPhone('');
         setPanCard('');
-        setAadharNumber('');
+        setAadhaarNumber('');
         setChequeNumber('');
         setBankName('');
         setAmount('');
@@ -252,11 +252,11 @@ export default function Contribute() {
                       />
                     </div>
 
-                    {/* PAN Card and Aadhar - Required for donations above ₹5000 */}
+                    {/* PAN Card and Aadhaar - Required for donations above ₹5000 */}
                     {requiresPan && (
                       <div className="mb-6">
                         <h3 className="text-lg font-bold text-black mb-4">
-                          PAN Card and Aadhar Information
+                          PAN Card and Aadhaar Information
                         </h3>
                         <input
                           type="text"
@@ -269,12 +269,12 @@ export default function Contribute() {
                         />
                         <input
                           type="text"
-                          placeholder="Aadhar Number (12 digits) *"
+                          placeholder="Aadhaar Number (12 digits) *"
                           value={aadharNumber}
                           onChange={(e) => {
                             const value = e.target.value.replace(/\D/g, ''); // Only numbers
                             if (value.length <= 12) {
-                              setAadharNumber(value);
+                              setAadhaarNumber(value);
                             }
                           }}
                           maxLength={12}
@@ -282,7 +282,7 @@ export default function Contribute() {
                           className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-base mb-3 bg-white focus:outline-none focus:border-primary transition"
                         />
                         <p className="text-sm text-gray-600 italic mt-2">
-                          PAN card (10 characters) and Aadhar number (12 digits) are mandatory for amounts above ₹5000 as per income tax rules.
+                          PAN card (10 characters) and Aadhaar number (12 digits) are mandatory for amounts above ₹5000 as per income tax rules.
                         </p>
                       </div>
                     )}

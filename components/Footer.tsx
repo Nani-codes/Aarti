@@ -22,7 +22,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 mb-6">
-              A Youth Empowerment Movement - Train, Transform, Triumph. Empowering youth through AI-driven skills, innovation, and entrepreneurship.
+              A Youth Empowerment Movement — Train, Transform, Triumph. Empowering youth through AI-driven skills, innovation, and entrepreneurship.
             </p>
             <div className="flex space-x-4">
               {/* Facebook */}
@@ -148,8 +148,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} AARTI - Aausaheb Research and Training Institute. All rights reserved.</p>
-          <p className="mt-2 text-sm">A Youth Empowerment Movement - Train, Transform, Triumph</p>
+          <p>&copy; {new Date().getFullYear()} AARTI — Aausaheb Research and Training Institute. All rights reserved.</p>
+          <p className="mt-2 text-sm">A Youth Empowerment Movement — Train, Transform, Triumph</p>
         </div>
       </div>
     </footer>

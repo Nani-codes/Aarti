@@ -4,8 +4,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 export const metadata: Metadata = {
-  title: "AARTI - Aausaheb Research and Training Institute",
-  description: "A Youth Empowerment Movement - Train, Transform, Triumph. Empowering youth through AI-driven skills, innovation, and entrepreneurship.",
+  title: "AARTI — Aausaheb Research and Training Institute",
+  description: "A Youth Empowerment Movement — Train, Transform, Triumph. Empowering youth through AI-driven skills, innovation, and entrepreneurship.",
 };
 
 export default function RootLayout({

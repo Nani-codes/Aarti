@@ -90,7 +90,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-black mb-1">Address</h3>
                       <p className="text-body">
                         Aausaheb Research &amp; Training Institute<br />
-                        Ch Sambhajinagar
+                        Chhatrapati Sambhajinagar
                       </p>
                     </div>
                   </div>
