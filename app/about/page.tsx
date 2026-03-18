@@ -15,7 +15,7 @@ export default function About() {
           <div className="container mx-auto px-4 relative z-10">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3">About AARTI</h1>
             <p className="text-base sm:text-lg md:text-xl text-center max-w-3xl mx-auto text-[#fdebdc] font-normal">
-              Aausaheb Research and Training Institute - A Youth Empowerment Movement
+              Aausaheb Research and Training Institute — A Youth Empowerment Movement
             </p>
           </div>
         </section>
@@ -41,7 +41,7 @@ export default function About() {
                     </h2>
                     <div className="w-24 h-1 bg-white/50 mx-auto mb-6"></div>
                     <p className="text-lg sm:text-xl md:text-2xl text-center mb-2 font-normal leading-relaxed max-w-3xl mx-auto text-gray-700">
-                      &quot;From Jijau&apos;s Sanskar to AI-driven Skills - Shaping Brave, Bright, and Self-Reliant Minds&quot;
+                      &quot;From Jijau&apos;s Sanskar to AI-driven Skills — Shaping Brave, Bright, and Self-Reliant Minds&quot;
                     </p>
                   </div>
 

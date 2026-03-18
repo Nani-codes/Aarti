@@ -35,7 +35,7 @@ export default function LoginPage() {
               <div className="bg-white rounded-lg shadow-md p-8">
                 <h1 className="text-3xl font-bold text-black text-center mb-6">Login</h1>
                 <p className="text-body text-center mb-8">
-                  Welcome back! Please login to your account.
+                  Welcome back! Please log in to your account.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">

@@ -5,21 +5,21 @@ import { useState, useEffect } from 'react';
 const testimonials = [
   {
     name: 'Priya Sharma',
-    role: 'Student - AI Skills Program',
+    role: 'Student — AI Skills Program',
     location: 'Pune, Maharashtra',
     image: '/images/users/user1.jpg',
-    text: 'The hands-on approach and real-world projects helped me gain confidence. The AR/VR lab experience was incredible - I could visualize complex concepts easily.',
+    text: 'The hands-on approach and real-world projects helped me gain confidence. The AR/VR lab experience was incredible — I could visualize complex concepts easily.',
   },
   {
     name: 'Rahul Patil',
-    role: 'Entrepreneur - Startup Incubation',
+    role: 'Entrepreneur — Startup Incubation',
     location: 'Mumbai, Maharashtra',
     image: '/images/users/user2.jpg',
     text: 'The mentorship program transformed my idea into a viable business. The support from industry experts and access to prototyping facilities made all the difference.',
   },
   {
     name: 'Anjali Deshmukh',
-    role: 'Graduate - Technical Skills',
+    role: 'Graduate — Technical Skills',
     location: 'Aurangabad, Maharashtra',
     image: '/images/users/user3.jpg',
     text: 'Coming from a small town, I never thought I\'d get exposure to Industry 4.0 technologies. The Centre of Excellence opened doors I didn\'t know existed.',

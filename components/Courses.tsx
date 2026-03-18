@@ -173,9 +173,9 @@ export default function Courses() {
               </svg>
             </div>
             <p className="text-paragraph italic mb-2 leading-relaxed">
-              &quot;AI won&apos;t take your jobs but AI literate will&quot;
+              &quot;AI won&apos;t take your job, but someone who is AI literate will&quot;
             </p>
-            <p className="text-xs md:text-sm font-semibold text-black">- Andrew Ng (Google)</p>
+            <p className="text-xs md:text-sm font-semibold text-black">— Andrew Ng (Google)</p>
           </div>
           <div className="bg-white border border-gray-100 p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-3 md:mb-4">
@@ -184,9 +184,9 @@ export default function Courses() {
               </svg>
             </div>
             <p className="text-paragraph italic mb-2 leading-relaxed">
-              &quot;All of us have no equal talent – yet all of us have equal opportunity to develop talent&quot;
+              &quot;Not all of us have equal talent – yet all of us have equal opportunity to develop talent&quot;
             </p>
-            <p className="text-xs md:text-sm font-semibold text-black">- Ratan Tata (TATA)</p>
+            <p className="text-xs md:text-sm font-semibold text-black">— Ratan Tata (TATA)</p>
           </div>
           <div className="bg-white border border-gray-100 p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-3 md:mb-4">
@@ -197,7 +197,7 @@ export default function Courses() {
             <p className="text-paragraph italic mb-2 leading-relaxed">
               &quot;Our industry does not respect tradition, it only respects innovation&quot;
             </p>
-            <p className="text-xs md:text-sm font-semibold text-black">- Satya Nadella (Microsoft)</p>
+            <p className="text-xs md:text-sm font-semibold text-black">— Satya Nadella (Microsoft)</p>
           </div>
         </div>
 
